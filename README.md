@@ -6,15 +6,15 @@ Rotina para limpar os resultados dos testes automatizados no serverest realizado
 ## Fluxo
 
 ```Mermaid
-flowchart TD
-    A[GitHub Actions] --> B["make deletar_ids"]
+    flowchart TD
+        A[GitHub Actions] --> B["make deletar_ids"]
 
-    B --> C[buscar_ids]
-    C --> D["Gera ids.txt"]
+        B --> C[buscar_ids]
+        C --> D["Gera ids.txt"]
 
-    B --> E[deletar_ids]
-    D --> E
+        B --> E[deletar_ids]
+        D --> E
 
-    E --> F["Remove todos os usuários encontrados"]
+        E --> F["Remove todos os usuários encontrados"]
 ```
 
