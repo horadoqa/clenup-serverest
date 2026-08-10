@@ -6,7 +6,7 @@
 buscar_ids:
 	@echo "Buscando IDs de usuários com nome 'Hora do QA'..."
 	@ids=$$(curl -s "https://serverest.dev/usuarios" \
-		| jq -r '.usuarios[] | select(.nome | test("^Hora")) | ._id'); \
+		| jq -r '.usuarios[] ._id'); \
 	if [ -z "$$ids" ]; then \
 		echo "Nenhum usuário encontrado!"; \
 	else \
