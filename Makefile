@@ -4,7 +4,7 @@
 # 1) Buscar IDs de usuários e salvar no arquivo ids.txt #
 # ===================================================== #
 buscar_ids:
-	@echo "Buscando IDs de usuários com nome 'Hora do QA'..."
+	@echo "Buscando IDs de usuários"
 	@ids=$$(curl -s "https://serverest.dev/usuarios" \
 		| jq -r '.usuarios[] ._id'); \
 	if [ -z "$$ids" ]; then \
